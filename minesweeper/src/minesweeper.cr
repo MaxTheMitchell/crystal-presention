@@ -2,15 +2,15 @@ require "crsfml"
 require "../src/grid"
 
 SQUARE_SIZE = 50
-GRID_SIZE   = {20, 10}
-MINES       = 20
+GRID_SIZE   = {30, 20}
+MINES       = 100
 
 grid = Grid.new(GRID_SIZE, SQUARE_SIZE, MINES)
 window = SF::RenderWindow.new(SF::VideoMode.new(GRID_SIZE[0] * SQUARE_SIZE, GRID_SIZE[1] * SQUARE_SIZE), "Mine Sweeper")
 states = SF::RenderStates.new(
   transform: SF::Transform.new
-    .scale(1, 1)         # Allow all operations to use 1 as the size of the grid
-    .translate(0.5, 0.5) # Move the reference point to centers of grid squares
+    .scale(1, 1)        
+    .translate(0.5, 0.5)
 )
 
 while window.open?

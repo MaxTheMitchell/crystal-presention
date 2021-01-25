@@ -51,6 +51,10 @@ class Square
     !(flagged? || text_str == "")
   end
 
+  def flagged?
+    text_str == FLAG_STR
+  end
+
   private def adjacent_mines
     @adjacent_sqrs.count(&.has_mine)
   end
@@ -61,10 +65,6 @@ class Square
 
   private def within_y_axis?(y)
     y >= @position[1] && y <= @position[1] + @size
-  end
-
-  private def flagged?
-    text_str == FLAG_STR
   end
 
   private def text_str
