@@ -19,7 +19,7 @@ class Square
     @text.position = {@position[0] + (@size * 0.2).to_i, @position[1] - (@size * 0.1)}
     @has_mine = false
   end
-
+  
   def draw(target, states)
     target.draw(@display, states)
     target.draw(@text, states)

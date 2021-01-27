@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="main-dev">
+<meta name="crystal_docs.project_name" content="minesweeper">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="minesweeper">
+  <title>Square - minesweeper main-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          minesweeper
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="minesweeper/toplevel" data-name="top level namespace">
+      <a href="toplevel.html">Top Level Namespace</a>
+      
+    </li>
+  
+  <li class=" " data-id="minesweeper/Grid" data-name="grid">
+      <a href="Grid.html">Grid</a>
+      
+    </li>
+  
+  <li class=" current" data-id="minesweeper/Square" data-name="square">
+      <a href="Square.html">Square</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Square
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="Square.html">Square</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type">SF::Drawable</li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="FLAG_STR">
+        <strong>FLAG_STR</strong> = <code><span class="s">&quot;#&quot;</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(size:Int32,position:Tuple(Int32,Int32))-class-method" class="signature"><strong>.new</strong>(size : Int32, position : Tuple(Int32, Int32))</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#adjacent_sqrs:Array(Square)-instance-method" class="signature"><strong>#adjacent_sqrs</strong> : Array(Square)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#adjacent_sqrs=(adjacent_sqrs)-instance-method" class="signature"><strong>#adjacent_sqrs=</strong>(adjacent_sqrs)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#draw(target,states)-instance-method" class="signature"><strong>#draw</strong>(target, states)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#flagged?-instance-method" class="signature"><strong>#flagged?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#has_mine:Bool-instance-method" class="signature"><strong>#has_mine</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#has_mine=(has_mine)-instance-method" class="signature"><strong>#has_mine=</strong>(has_mine)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_click(clicked=[]ofSquare)-instance-method" class="signature"><strong>#left_click</strong>(clicked = <span class="o">[]</span> <span class="k">of</span> <span class="t">Square</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right_click-instance-method" class="signature"><strong>#right_click</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#uncovered?-instance-method" class="signature"><strong>#uncovered?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#within?(x,y)-instance-method" class="signature"><strong>#within?</strong>(x, y)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(size:Int32,position:Tuple(Int32,Int32))-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(size : Int32, position : Tuple(Int32, Int32))
+
+        <a class="method-permalink" href="#new(size:Int32,position:Tuple(Int32,Int32))-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="adjacent_sqrs:Array(Square)-instance-method">
+      <div class="signature">
+        
+        def <strong>adjacent_sqrs</strong> : Array(<a href="Square.html">Square</a>)
+
+        <a class="method-permalink" href="#adjacent_sqrs:Array(Square)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="adjacent_sqrs=(adjacent_sqrs)-instance-method">
+      <div class="signature">
+        
+        def <strong>adjacent_sqrs=</strong>(adjacent_sqrs)
+
+        <a class="method-permalink" href="#adjacent_sqrs=(adjacent_sqrs)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="draw(target,states)-instance-method">
+      <div class="signature">
+        
+        def <strong>draw</strong>(target, states)
+
+        <a class="method-permalink" href="#draw(target,states)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="flagged?-instance-method">
+      <div class="signature">
+        
+        def <strong>flagged?</strong>
+
+        <a class="method-permalink" href="#flagged?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="has_mine:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>has_mine</strong> : Bool
+
+        <a class="method-permalink" href="#has_mine:Bool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="has_mine=(has_mine)-instance-method">
+      <div class="signature">
+        
+        def <strong>has_mine=</strong>(has_mine)
+
+        <a class="method-permalink" href="#has_mine=(has_mine)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_click(clicked=[]ofSquare)-instance-method">
+      <div class="signature">
+        
+        def <strong>left_click</strong>(clicked = <span class="o">[]</span> <span class="k">of</span> <span class="t">Square</span>)
+
+        <a class="method-permalink" href="#left_click(clicked=[]ofSquare)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right_click-instance-method">
+      <div class="signature">
+        
+        def <strong>right_click</strong>
+
+        <a class="method-permalink" href="#right_click-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="uncovered?-instance-method">
+      <div class="signature">
+        
+        def <strong>uncovered?</strong>
+
+        <a class="method-permalink" href="#uncovered?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="within?(x,y)-instance-method">
+      <div class="signature">
+        
+        def <strong>within?</strong>(x, y)
+
+        <a class="method-permalink" href="#within?(x,y)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

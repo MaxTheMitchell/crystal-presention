@@ -12,6 +12,8 @@ def bubble_sort(list)
   bubble_sort(list)
 end
 
+INPUT_FILE_NAME = "input.txt"
+
 start_time = Time.now
 bubble_sort(File.read("input.txt").split("\n").map { |v| v.to_i })
 puts (Time.now - start_time)

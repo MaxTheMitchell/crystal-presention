@@ -12,4 +12,8 @@ def bubble_sort(list)
   bubble_sort(list)
 end
 
-puts Time.measure { bubble_sort(File.read("input.txt").split("\n").map { |v| v.to_i }) }
+INPUT_FILE_NAME = "input.txt"
+
+puts Time.measure {
+  bubble_sort(File.read(INPUT_FILE_NAME).split("\n").map { |v| v.to_i })
+}
