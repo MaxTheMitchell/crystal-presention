@@ -17,6 +17,7 @@ class Grid
     set_adj_sqrs(@sqrs)
   end
 
+  # it draws the grid
   def draw(target, states)
     @sqrs.flatten.each { |sqr| target.draw(sqr, states) }
     target.draw(@text)

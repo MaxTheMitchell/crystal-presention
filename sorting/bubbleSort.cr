@@ -2,9 +2,7 @@ def bubble_sort(list)
   sorted = true
   (list.size - 1).times do |i|
     if list[i] > list[i + 1]
-      tmp = list[i]
-      list[i] = list[i + 1]
-      list[i + 1] = tmp
+      list[i], list[i + 1] = list[i + 1], list[i]
       sorted = false
     end
   end
